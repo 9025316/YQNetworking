@@ -1,14 +1,16 @@
 # YQNetworking
-A Networking frameworking based on AFNetworking3.1
+A Networking frameworking based on AFNetworking3.x
 
 # More Information
-基于AFNetworking3.1封装网络请求功能，API面向业务层更加友好
+基于AFNetworking3.x封装网络请求功能，API面向业务层更加友好
 
 - 基础功能
-	- GET、POST、下载、单文件上传、多文件上传、取消网络请求。此外拓展出缓存功能，缓存分为内存缓存和磁盘缓存
-	- 缓存使用LRU缓存淘汰算法，支持过期检验
+	- GET、POST、下载、单文件上传、多文件上传、取消网络请求
+- 缓存功能：
+	- 缓存分为内存缓存和磁盘缓存，缓存使用LRU缓存淘汰算法，支持过期检验
 
 # Usage
+将YQNetworking包拉进工程
 
 ```objC
 #import "YQNetworking.h"
