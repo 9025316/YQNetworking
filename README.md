@@ -180,7 +180,8 @@ POST请求
  *  清除所有缓存
  */
 + (void)clearTotalCache;
-```YQ
+```
+
 
 自动清理缓存
 
