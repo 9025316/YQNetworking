@@ -43,5 +43,4 @@
  */
 - (NSArray *)removeLRUFileNodeWithCacheTime:(NSTimeInterval) time;
 
-
 @end

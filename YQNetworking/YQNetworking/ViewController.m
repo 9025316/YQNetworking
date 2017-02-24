@@ -32,7 +32,7 @@
     }];
     
     NSLog(@"size is %lu",[YQNetworking totalCacheSize]);
-
+    
 }
 
 

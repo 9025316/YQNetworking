@@ -14,7 +14,7 @@
 
 #define YQ_ERROR_IMFORMATION @"网络出现错误，请检查网络连接"
 
-#define YQ_ERROR [NSError errorWithDomain:@"com.caixindong.YQNetworking.ErrorDomain" code:-999 userInfo:@{ NSLocalizedDescriptionKey:YQ_ERROR_IMFORMATION}]
+#define YQ_ERROR [NSError errorWithDomain:@"com.hyq.YQNetworking.ErrorDomain" code:-999 userInfo:@{ NSLocalizedDescriptionKey:YQ_ERROR_IMFORMATION}]
 
 static NSMutableArray   *requestTasksPool;
 

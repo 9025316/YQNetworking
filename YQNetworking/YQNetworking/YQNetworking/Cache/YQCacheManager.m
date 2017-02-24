@@ -23,12 +23,12 @@ static NSTimeInterval cacheTime = 7 * 24 * 60 * 60;
 @implementation YQCacheManager
 
 + (YQCacheManager *)shareManager {
-    static YQCacheManager *_XDCacheManager = nil;
+    static YQCacheManager *_YQCacheManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _XDCacheManager = [[YQCacheManager alloc] init];
+        _YQCacheManager = [[YQCacheManager alloc] init];
     });
-    return _XDCacheManager;
+    return _YQCacheManager;
 }
 
 - (void)setCacheTime:(NSTimeInterval)time diskCapacity:(NSUInteger)capacity {
@@ -64,7 +64,7 @@ static NSTimeInterval cacheTime = 7 * 24 * 60 * 60;
         NSString *directoryPath = nil;
         directoryPath = [[NSUserDefaults standardUserDefaults] objectForKey:cacheDirKey];
         if (!directoryPath) {
-            directoryPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"XDNetworking"] stringByAppendingPathComponent:@"networkCache"];
+            directoryPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"YQNetworking"] stringByAppendingPathComponent:@"networkCache"];
             [[NSUserDefaults standardUserDefaults] setObject:directoryPath forKey:cacheDirKey];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
@@ -125,7 +125,7 @@ static NSTimeInterval cacheTime = 7 * 24 * 60 * 60;
     NSString *directoryPath = nil;
     directoryPath = [[NSUserDefaults standardUserDefaults] objectForKey:downloadDirKey];
     if (!directoryPath) {
-        directoryPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"XDNetworking"] stringByAppendingPathComponent:@"download"];
+        directoryPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"YQNetworking"] stringByAppendingPathComponent:@"download"];
         
         [[NSUserDefaults standardUserDefaults] setObject:directoryPath forKey:downloadDirKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
